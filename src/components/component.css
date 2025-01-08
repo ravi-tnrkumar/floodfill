@@ -1,0 +1,22 @@
+.board {
+    display: inline-grid;
+    /* grid-template-columns: auto; */
+    column-count: 10;
+    column-width: auto;
+    /* width: 80vh; */
+    width:fit-content;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.box {
+    /* aspect-ratio: 1/1; */
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    cursor: pointer;
+    /* border-top: 40px; */
+}
