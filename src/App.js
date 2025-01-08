@@ -22,7 +22,7 @@ function floodFill(inputArray, row, col, oldValue, newValue) {
   
     // console.log(`floodFill(inputArray, ${row}, ${col}, ${data[row][col]}, 2)`);
 
-    if (inputArray === undefined || inputArray.length === 0) return;
+    if (!inputArray || inputArray.length === 0) return;
 
     let numRows = inputArray.length - 1;
     let numCols = inputArray[0].length - 1;
@@ -56,8 +56,8 @@ function floodFill(inputArray, row, col, oldValue, newValue) {
 function handleCellClick(event) {
 
     const dimension = (event?.target?.id+"").split('_').slice(1,3);
-    const row = dimension[0];
-    const col = dimension[1];
+    const row = parseInt(dimension[0]);
+    const col = parseInt(dimension[1]);
 
     // console.log(row + ' X ' + col);
     console.log(`floodFill(data, ${row}, ${col}, ${data[row][col]}, 2)`);

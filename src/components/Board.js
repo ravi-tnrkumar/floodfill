@@ -1,6 +1,7 @@
 import './component.css';
 
 export default function Board ({twoDimArray, handleClick}) {
+    let colors =  ['black', 'white', 'blue'];
     return <div className="board">
         {
             twoDimArray.map((oneDArray, row) => {
@@ -16,8 +17,11 @@ export default function Board ({twoDimArray, handleClick}) {
                                         id={'box_'+row+"_"+column}
                                         key={'box_'+row+"_"+column}
                                         onClick={handleClick}
+                                        style={{
+                                            backgroundColor: colors[value]
+                                        }}
                                     >
-                                        {value}
+                                        {/* {value} */}
                                     </div>
                             })
                         }
